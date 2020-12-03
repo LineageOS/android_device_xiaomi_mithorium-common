@@ -138,6 +138,10 @@ PRODUCT_PACKAGES += \
     charger_led \
     charger_led_recovery
 
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # Consumer IR
 ifneq ($(TARGET_HAS_NO_CONSUMERIR),true)
 PRODUCT_PACKAGES += \
