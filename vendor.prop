@@ -18,6 +18,9 @@ ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.max_virtual_display_dimension=4096
 
+# Incremental FS
+ro.incremental.enable=1
+
 # Radio
 persist.vendor.radio.mt_sms_ack=30
 
