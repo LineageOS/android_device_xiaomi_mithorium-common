@@ -140,6 +140,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="concurrent-instances" max="3" />
             <Limit name="performance-point-720x480" value="30" />
             <Limit name="performance-point-720x576" value="25" />
+            <Attribute name="software-codec" />
         </MediaCodec>
         <MediaCodec name="OMX.qcom.video.encoder.h263sw" type="video/3gpp" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -153,6 +154,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="concurrent-instances" max="3" />
             <Limit name="performance-point-720x480" value="30" />
             <Limit name="performance-point-720x576" value="25" />
+            <Attribute name="software-codec" />
         </MediaCodec>
     </Encoders>
     <Decoders>
