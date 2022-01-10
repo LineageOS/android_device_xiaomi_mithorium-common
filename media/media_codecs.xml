@@ -126,7 +126,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="blocks-per-second" min="1" max="244800" />
             <Limit name="bitrate" range="1-20000000" />
             <Limit name="concurrent-instances" max="8" />
-            <Feature name="can-swap-width-height" />
+            <Feature name="can-swap-width-height" required="true" />
             <Limit name="performance-point-1920x1088" value="30" />
         </MediaCodec>
         <!-- Video Software  -->
@@ -184,7 +184,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="bitrate" range="1-20000000" />
             <Feature name="adaptive-playback" />
             <Limit name="concurrent-instances" max="8" />
-            <Feature name="can-swap-width-height" />
+            <Feature name="can-swap-width-height" required="true" />
             <Limit name="performance-point-1920x1088" value="30" />
         </MediaCodec>
         <MediaCodec name="OMX.qcom.video.decoder.vp8" type="video/x-vnd.on2.vp8" >
