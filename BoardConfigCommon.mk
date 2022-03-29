@@ -37,6 +37,7 @@ TARGET_KERNEL_VERSION := 4.19
 TARGET_KERNEL_CONFIG := \
     vendor/msm8937-perf_defconfig \
     vendor/common.config \
+    vendor/debugfs.config \
     vendor/feature/android-12.config \
     vendor/feature/lmkd.config
 
