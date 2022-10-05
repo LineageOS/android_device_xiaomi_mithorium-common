@@ -878,6 +878,9 @@ DEFAULT_IMPL()
 void LocApiBase::updateSystemPowerState(PowerStateType /*powerState*/)
 DEFAULT_IMPL()
 
+void LocApiBase::updatePowerConnectState(bool /*connected*/)
+DEFAULT_IMPL()
+
 void LocApiBase::
     configRobustLocation(bool /*enabled*/,
                          bool /*enableForE911*/,

@@ -316,6 +316,7 @@ public:
     void updateNmeaMask(uint32_t mask);
 
     virtual void updateSystemPowerState(PowerStateType systemPowerState);
+    virtual void updatePowerConnectState(bool connected);
 
     virtual void configRobustLocation(bool enable, bool enableForE911,
                                       LocApiResponse* adapterResponse=nullptr);

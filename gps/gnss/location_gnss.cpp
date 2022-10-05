@@ -432,7 +432,7 @@ static void injectLocationExt(const GnssLocationInfoNotification &locationInfo)
 
 static void updateBatteryStatus(bool charging) {
     if (NULL != gGnssAdapter) {
-        gGnssAdapter->getSystemStatus()->updatePowerConnectState(charging);
+        gGnssAdapter->updatePowerConnectStateCommand(charging);
     }
 }
 
