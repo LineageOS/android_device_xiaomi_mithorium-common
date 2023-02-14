@@ -1,4 +1,5 @@
 # All unpinned blobs below are extracted from Nokia/Panther_00WW/PAN_sprout:11/RKQ1.200928.002/00WW_3_240:user/release-keys
+# FP3 Package version: Fairphone/FP3/FP3:11/8901.4.A.0010/gms-f74c58a8:user/release-keys
 
 # ADSP
 vendor/bin/adsprpcd
@@ -320,6 +321,9 @@ vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 vendor/lib64/libxml.so
 
+# QMI - from FP3
+vendor/lib64/libqmiservices.so:vendor/lib64/libQmiservices.so
+
 # QMI (IRSC)
 vendor/bin/irsc_util
 
@@ -374,7 +378,7 @@ vendor/bin/tftp_server
 vendor/etc/init/vendor.qti.tftp.rc
 vendor/lib64/libqsocket.so
 
-# RIL (QCRILD)
+# RIL (QCRILD) - from FP3
 vendor/bin/hw/qcrild
 vendor/etc/init/qcrild.rc
 vendor/lib64/liblqe.so
@@ -399,9 +403,10 @@ vendor/lib64/vendor.qti.hardware.radio.ims@1.3.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.4.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.5.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.6.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.7.so
 vendor/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so
-vendor/lib64/vendor.qti.hardware.radio.qcriNvOpt@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.lpa@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.0.so

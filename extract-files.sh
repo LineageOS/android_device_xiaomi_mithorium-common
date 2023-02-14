@@ -77,6 +77,9 @@ function blob_fixup() {
                 "${PATCHELF}" --add-needed "libshim_imscamera.so" "${2}"
             done
             ;;
+        vendor/lib64/libQmiservices.so | vendor/lib64/libril-qc-hal-qmi.so )
+            sed -i 's|libqmiservices.so|libQmiservices.so|g' "${2}"
+            ;;
     esac
 }
 
