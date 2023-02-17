@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0eac7a64_27d61d1f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2023-02-17T17:58:09Z",
+      "side": 1,
+      "message": "Blobs taken from different devices than stock should be pinned.",
+      "revId": "d174d496192b1f9c6e4c06898ccaed95110eddf3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
