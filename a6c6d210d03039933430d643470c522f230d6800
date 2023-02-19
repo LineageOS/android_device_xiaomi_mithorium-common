@@ -16,6 +16,24 @@
       "message": "Holding for https://gitlab.com/the-muppets/proprietary_vendor_xiaomi/-/merge_requests/170",
       "revId": "a6c6d210d03039933430d643470c522f230d6800",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "38aca641_24c0e5e1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2023-02-19T17:06:47Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "718ab96e_f53ec274",
+      "revId": "a6c6d210d03039933430d643470c522f230d6800",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
