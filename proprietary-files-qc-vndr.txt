@@ -1,5 +1,6 @@
 # All unpinned blobs below are extracted from Nokia/Panther_00WW/PAN_sprout:11/RKQ1.200928.002/00WW_3_240:user/release-keys
 # FP3 Package version: Fairphone/FP3/FP3:11/8901.4.A.0010/gms-f74c58a8:user/release-keys
+# olive Package version: Xiaomi/olive/olive:10/QKQ1.191014.001/V12.5.5.0.QCNCNXM:user/release-keys
 
 # ADSP
 vendor/bin/adsprpcd
@@ -117,6 +118,11 @@ vendor/firmware/cpp_firmware_v1_5_1.fw
 vendor/firmware/cpp_firmware_v1_5_2.fw
 vendor/firmware/cpp_firmware_v1_6_0.fw
 vendor/firmware/cpp_firmware_v1_8_0.fw
+
+# FM radio
+vendor/bin/fm_qsoc_patches
+vendor/bin/init.qti.fm.sh
+vendor/etc/init/init.qti.fm.rc
 
 # GNSS
 vendor/bin/loc_launcher
