@@ -31,3 +31,4 @@
 
 unlinkat: 1
 sched_getaffinity: 1
+madvise: 1
