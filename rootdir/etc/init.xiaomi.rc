@@ -37,6 +37,10 @@ on boot
     enable vendor.qcrild
     enable vendor.qcrild2
 
+on property:sys.boot_completed=1 && property:vendor.ims.DATA_DAEMON_STATUS=1
+    restart vendor.qcrild
+    restart vendor.qcrild2
+
 # Subsystem Restart
 on init
     # Setup all the sub-system as related
