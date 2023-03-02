@@ -1,0 +1,25 @@
+sh_binary {
+    name: "subsystem_state_notifier.sh",
+    src: "subsystem_state_notifier.sh",
+    vendor: true,
+}
+
+cc_binary {
+    name: "subsystem_state_notifier",
+    cflags: [
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-Wunused",
+    ],
+    srcs: [
+        "main.c",
+    ],
+    shared_libs: [
+        "libcutils",
+        "liblog",
+    ],
+    init_rc: ["subsystem_state_notifier.rc"],
+    required: ["subsystem_state_notifier.sh"],
+    vendor: true
+}
