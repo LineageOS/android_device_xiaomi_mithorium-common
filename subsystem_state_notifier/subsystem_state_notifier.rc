@@ -1,0 +1,14 @@
+service vendor.subsystem_state_notifier_script /vendor/bin/subsystem_state_notifier.sh
+    class core
+    user root
+    group root
+    oneshot
+
+service vendor.subsystem_state_notifier.modem /vendor/bin/subsystem_state_notifier modem
+    class core
+    user system
+    group system
+    disabled
+
+on property:ro.vendor.subsys_state_notifier.modem.state_path=*
+    enable vendor.subsystem_state_notifier.modem
