@@ -23,6 +23,9 @@
 /mnt/vendor/persist(/.*)?                                     u:object_r:mnt_vendor_file:s0
 /mnt/vendor/persist/WCNSS_qcom_wlan_nv.bin                    u:object_r:wcnss_persist_file:s0
 
+# Executables
+/(vendor|system/vendor)/bin/subsystem_state_notifier		u:object_r:subsystem_state_notifier_exec:s0
+
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.xiaomi_mithorium      u:object_r:hal_light_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.thermal@2\.0-service\.qti\.xiaomi_mithorium	u:object_r:hal_thermal_default_exec:s0
@@ -41,6 +44,9 @@
 
 # Sensors
 /persist/sensors(/.*)?                          u:object_r:sensors_persist_file:s0
+
+# Subsystems
+/sys/devices(/platform)?/soc/4080000\.qcom,mss/subsys[0-9]/state	u:object_r:sysfs_modem_subsys:s0
 
 # Sys files
 /sys/devices(/platform)?/soc/78b6000\.i2c/i2c-2/2-[0-9a-f]+/leds(/.*)?		u:object_r:sysfs_leds:s0
