@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9f60c2b_7a337534",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2023-03-03T19:16:04Z",
+      "side": 1,
+      "message": "legacy ril won\u0027t fix this and it\u0027s more cringe, btw",
+      "revId": "a979869314a134d65646f5798d68a8ae5b98fd42",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
