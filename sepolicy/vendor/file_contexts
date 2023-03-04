@@ -13,6 +13,9 @@
 # Camera sockets
 /data/vendor/qcam(/.*)?		u:object_r:vendor_camera_data_file:s0
 
+# Charger
+/(vendor|system/vendor)/bin/charger_led		u:object_r:charger_led_exec:s0
+
 # Device nodes
 /dev/stune(/.*)?	u:object_r:cgroup:s0
 
