@@ -58,3 +58,15 @@ on property:sys.usb.ffs.ready=1
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+# Charger LED
+service charger_led /system/bin/charger_led
+    user system
+    group system
+    seclabel u:r:charger_led:s0
+    stdio_to_kmsg
+    oneshot
+    disabled
+
+on boot
+    start charger_led
