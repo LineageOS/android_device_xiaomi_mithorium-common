@@ -131,6 +131,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libstdc++.vendor
 
+PRODUCT_PACKAGES += \
+    Camera2
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_led \
