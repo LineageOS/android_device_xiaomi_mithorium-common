@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c719691_13fd0202",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2023-03-21T11:32:51Z",
+      "side": 1,
+      "message": "Doesn\u0027t work at all (`vendor.peripheral.modem.state` doesn\u0027t change)",
+      "revId": "2711fe0511ffee58193d30d793e9a7763d95840f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
