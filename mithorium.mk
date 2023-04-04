@@ -178,6 +178,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# FM
+PRODUCT_PACKAGES += \
+    FMRadio \
+    libfmjni
+
 # Gatekeeper HAL
 ifneq ($(TARGET_USES_DEVICE_SPECIFIC_GATEKEEPER),true)
 PRODUCT_PACKAGES += \
