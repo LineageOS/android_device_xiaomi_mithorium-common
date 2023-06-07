@@ -359,6 +359,11 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     init.qti.qseecomd.sh
 
+ifeq ($(TARGET_KERNEL_VERSION),4.19)
+PRODUCT_PACKAGES += \
+    init.qti.dcvs.sh
+endif
+
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.4.vendor \
