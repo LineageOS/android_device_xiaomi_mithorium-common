@@ -70,7 +70,7 @@ Lights::Lights() {
     else if (!access(((mLedUseRedAsWhite ? led_paths[RED] : led_paths[WHITE]) + "breath").c_str(), W_OK))
         mLedBreathType = LedBreathType::BREATH;
     else
-        mLedBreathType = LedBreathType::UNSUPPORTED;
+        mLedBreathType = LedBreathType::TRIGGER;
 }
 
 // AIDL methods
@@ -105,7 +105,6 @@ ndk::ScopedAStatus Lights::getLights(std::vector<HwLight>* lights) {
 // device methods
 void Lights::setSpeakerLightLocked(const HwLightState& state) {
     uint32_t alpha, red, green, blue;
-    uint32_t blink;
     bool rc = true;
 
     // Extract brightness from AARRGGBB
@@ -121,20 +120,31 @@ void Lights::setSpeakerLightLocked(const HwLightState& state) {
         blue = (blue * alpha) / 0xFF;
     }
 
-    blink = (state.flashOnMs != 0 && state.flashOffMs != 0);
+    // Reset LED trigger if not intended to breath
+    if (mLedBreathType == LedBreathType::TRIGGER &&
+            (state.flashMode != FlashMode::HARDWARE &&
+             state.flashMode != FlashMode::TIMED)) {
+        if (mWhiteLed) {
+            rc = setLedTrigger(mLedUseRedAsWhite ? RED : WHITE, "none");
+        } else {
+            rc = setLedTrigger(RED, "none");
+            rc &= setLedTrigger(GREEN, "none");
+            rc &= setLedTrigger(BLUE, "none");
+        }
+    }
 
     switch (state.flashMode) {
         case FlashMode::HARDWARE:
         case FlashMode::TIMED:
             if (mWhiteLed) {
-                rc = setLedBreath(mLedUseRedAsWhite ? RED : WHITE, blink);
+                rc = setLedBreath(state, mLedUseRedAsWhite ? RED : WHITE);
             } else {
                 if (!!red)
-                    rc = setLedBreath(RED, blink);
+                    rc = setLedBreath(state, RED);
                 if (!!green)
-                    rc &= setLedBreath(GREEN, blink);
+                    rc &= setLedBreath(state, GREEN);
                 if (!!blue)
-                    rc &= setLedBreath(BLUE, blink);
+                    rc &= setLedBreath(state, BLUE);
             }
             if (rc)
                 break;
@@ -161,20 +171,35 @@ void Lights::handleSpeakerBatteryLocked() {
         return setSpeakerLightLocked(mNotification);
 }
 
-bool Lights::setLedBreath(led_type led, uint32_t value) {
+bool Lights::setLedBreath(const HwLightState& state, led_type led) {
+    bool blink = (state.flashOnMs != 0 && state.flashOffMs != 0);
+    bool rc = false;
+
     switch (mLedBreathType) {
         case LedBreathType::BLINK:
-            return WriteToFile(led_paths[led] + "blink", value);
+            rc = WriteToFile(led_paths[led] + "blink", blink);
+            break;
         case LedBreathType::BREATH:
-            return WriteToFile(led_paths[led] + "breath", value);
+            rc = WriteToFile(led_paths[led] + "breath", blink);
+            break;
+        case LedBreathType::TRIGGER:
+            rc = setLedTrigger(led, "timer");
+            rc &= WriteToFile(led_paths[led] + "delay_on", state.flashOnMs);
+            rc &= WriteToFile(led_paths[led] + "delay_off", state.flashOffMs);
+            break;
         default:
             break;
     }
-    return false;
+
+    return rc;
 }
 
 bool Lights::setLedBrightness(led_type led, uint32_t value) {
     return WriteToFile(led_paths[led] + "brightness", value);
+}
+
+bool Lights::setLedTrigger(led_type led, std::string value) {
+    return WriteStringToFile(value, led_paths[led] + "trigger");
 }
 
 // Utils
