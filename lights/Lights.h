@@ -50,9 +50,13 @@ private:
     uint32_t RgbaToBrightness(uint32_t color);
     bool WriteToFile(const std::string& path, uint32_t content);
 
+    int mBacklightMaxBrightness;
     std::string mBacklightNode;
-    bool mWhiteLed;
+
     bool mBreath;
+    bool mLedUseRedAsWhite;
+    bool mWhiteLed;
+
     HwLightState mNotification;
     HwLightState mBattery;
 };
