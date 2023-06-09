@@ -18,7 +18,6 @@ vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 # Bluetooth & FM
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
@@ -26,6 +25,9 @@ vendor/lib64/libbtnv.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
+
+# Bluetooth - from FP3
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 
 # CACert - from FP3
 -vendor/app/CACertService/CACertService.apk
@@ -491,3 +493,6 @@ vendor/bin/wcnss_service
 # Misc
 vendor/etc/public.libraries.txt
 vendor/lib64/libqsocket.so
+
+# Misc - from FP3
+vendor/lib64/libsoc_helper.so
