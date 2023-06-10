@@ -1,5 +1,6 @@
 # All unpinned blobs below are extracted from Nokia/Panther_00WW/PAN_sprout:11/RKQ1.200928.002/00WW_3_240:user/release-keys
 # riva Package version: Xiaomi/riva/riva:8.1.0/OPM1.171019.026/V11.0.2.0.OCKMIXM:user/release-keys
+# JioPhoneNext Package version: Jio/JioPhoneNext/LS1542QWN:11/RKQ1.220411.001/001.06.024:user/release-keys
 
 # ADSP
 vendor/lib/libadsprpc.so
@@ -68,29 +69,31 @@ vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
 
 # Media
-vendor/lib/libAlacSwDec.so
-vendor/lib/libApeSwDec.so
-vendor/lib/libMpeg4SwEncoder.so
-vendor/lib/libOmxAacDec.so
-vendor/lib/libOmxAlacDec.so
-vendor/lib/libOmxAlacDecSw.so
-vendor/lib/libOmxAmrDec.so
-vendor/lib/libOmxAmrwbplusDec.so
-vendor/lib/libOmxApeDec.so
-vendor/lib/libOmxApeDecSw.so
-vendor/lib/libOmxEvrcDec.so
-vendor/lib/libOmxG711Dec.so
-vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxSwVdec.so
-vendor/lib/libOmxSwVencMpeg4.so
 vendor/lib/libOmxVideoDSMode.so
-vendor/lib/libOmxVpp.so
-vendor/lib/libOmxWmaDec.so
-vendor/lib/libmmosal.so
-vendor/lib/libswvdec.so
-vendor/lib/libvpplibrary.so
 vendor/lib/libwfdcommonutils_proprietary.so
 vendor/lib/libwfdmmservice.so
+
+# Media - from JioPhoneNext
+vendor/lib/libAlacSwDec.so|2db927b746f9521da19360d8908939fbc028c14e
+vendor/lib/libApeSwDec.so|eb264167cd4f04b48e1aaca9fde13a38368ac1c1
+vendor/lib/libMpeg4SwEncoder.so|17add1e247c3b4fdfe9fcb3c9f31e5fc6e08fcfa
+vendor/lib/libOmxAacDec.so|71ece99001207702e9e30994f5fb7b96dd16f43d
+vendor/lib/libOmxAlacDec.so|85eee4467ff05dc32f0c0f7c93216f318b615411
+vendor/lib/libOmxAlacDecSw.so|0d66b94348420fe4568505dc7ee87d42ab4c1e6e
+vendor/lib/libOmxAmrDec.so|b76e7aaec505dcfb898dda9a9ccb4899fecf329a
+vendor/lib/libOmxAmrwbplusDec.so|885bd6bdde50dc8128a8a95f13639cf4200e87fa
+vendor/lib/libOmxApeDec.so|7a948ae9882e63dbdd0481ddb95b60a3eea7ba27
+vendor/lib/libOmxApeDecSw.so|863e7ad4b4bb3d0fdec8ae90e8318251c338ac19
+vendor/lib/libOmxEvrcDec.so|1dbc8c1c1b728f8b0d959d7e6ac4142aa278be85
+vendor/lib/libOmxG711Dec.so|a7b54d093e617ffa8b1b250ea2128ba90654c236
+vendor/lib/libOmxQcelp13Dec.so|614d1efd42310646be1b51bcd77964606d34afc6
+vendor/lib/libOmxSwVdec.so|cb9ff77af4e2b4482b6ee28f66c55f06473dd2fe
+vendor/lib/libOmxSwVencMpeg4.so|3920dc7b6ade7e54ede0102372dcc508e7c7ab84
+vendor/lib/libOmxVpp.so|a9a5425bacb59294a96e82fcb2b0095918bfefd7
+vendor/lib/libOmxWmaDec.so|d3cbd4d123fd3ac7c8c97887d1be6aa0c68a36f9
+vendor/lib/libmmosal.so|d3f57f4681a09cb7fb8c7152e9075e4180f753f2
+vendor/lib/libswvdec.so|4b0b57f5d89ca25952652ba84f233ace704e9517
+vendor/lib/libvpplibrary.so|485daf66f2bb5ba53eca6fcd0073c1d61bdbbb04
 
 # Perf
 vendor/lib/libqti-perfd-client.so
