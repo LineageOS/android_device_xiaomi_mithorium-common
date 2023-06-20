@@ -109,6 +109,7 @@ function 8917_sched_dcvs_eas()
         echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/rtg_boost_freq
 
         echo 960000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+        echo 1401000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
 
         #input boost params
         echo 1094400 > /sys/module/cpu_boost/parameters/input_boost_freq
@@ -167,6 +168,7 @@ function 8937_sched_dcvs_eas()
         echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/rtg_boost_freq
 
         echo 960000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+        echo 1401000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
 
         ## enable governor for power cluster
         echo 1 > /sys/devices/system/cpu/cpu4/online
@@ -179,6 +181,7 @@ function 8937_sched_dcvs_eas()
         echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/rtg_boost_freq
 
         echo 768000 > /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
+        echo 1094400 > /sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq
 
         #input boost params
         echo 109440 > /sys/module/cpu_boost/parameters/input_boost_freq
