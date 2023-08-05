@@ -36,9 +36,9 @@ TARGET_KERNEL_VERSION := 4.9
 
 TARGET_KERNEL_CONFIG := \
     vendor/msm8937-perf_defconfig \
-    vendor/xiaomi/common.config \
-    vendor/xiaomi/feature/android-12.config \
-    vendor/xiaomi/feature/lmkd.config
+    vendor/common.config \
+    vendor/feature/android-12.config \
+    vendor/feature/lmkd.config
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
