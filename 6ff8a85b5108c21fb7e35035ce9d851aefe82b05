@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b059d3b7_08ae6650",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14734
+      },
+      "writtenOn": "2023-09-30T16:23:59Z",
+      "side": 1,
+      "message": "The charger service should be removed from init.qcom.rc as AIDL Health supports charger mode",
+      "revId": "6ff8a85b5108c21fb7e35035ce9d851aefe82b05",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
