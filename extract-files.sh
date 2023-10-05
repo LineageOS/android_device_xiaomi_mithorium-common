@@ -80,6 +80,9 @@ function blob_fixup() {
         vendor/lib64/libQmiservices.so | vendor/lib64/libril-qc-hal-qmi.so )
             sed -i 's|libqmiservices.so|libQmiservices.so|g' "${2}"
             ;;
+        vendor/lib/libts_detected_face_hal.so|vendor/lib/libts_face_beautify_hal.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
         vendor/lib64/libwvhidl.so|vendor/lib64/mediadrm/libwvdrmengine.so)
             sed -i 's|libprotobuf-cpp-lite-3.9.1.so|libprotobuf-cpp-full-3.9.1.so|g' "${2}"
             ;;
