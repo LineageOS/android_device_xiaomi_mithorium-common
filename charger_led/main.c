@@ -20,6 +20,7 @@
 
 #define BAT_CAPACITY_PATH "/sys/class/power_supply/battery/capacity"
 #define USB_CURRENT_MAX_PATH "/sys/class/power_supply/usb/current_max"
+#define USB_ONLINE_PATH "/sys/class/power_supply/usb/online"
 
 #define LED_PATH(led, file) "/sys/class/leds/" led "/" file
 
@@ -71,6 +72,7 @@ bool use_blink_node = false;
 float led_brightness_multiplier = 1.0;
 int bat_capacity = 0;
 int usb_current_max = 0;
+int usb_online = 0;
 
 struct led {
     int id;
@@ -255,6 +257,11 @@ bool update_led(int led_id, int led_state) {
 }
 
 void handle_battery_capacity_update_rgb(void) {
+    if (!usb_online) {  // Not charging
+        if (active_led.state != LED_STATE_OFF) stop_active_led();
+        return;
+    }
+
     if (bat_capacity <= 10)  // 0 ~ 10
         update_led(RED, LED_STATE_BLINK);
     else if (bat_capacity <= 30)  // 11 ~ 30
@@ -273,6 +280,11 @@ void handle_battery_capacity_update_rgb(void) {
 }
 
 void handle_battery_capacity_update_white(void) {
+    if (!usb_online) {  // Not charging
+        if (active_led.state != LED_STATE_OFF) stop_active_led();
+        return;
+    }
+
 #ifdef __ANDROID_RECOVERY__
     if (bat_capacity <= 30)  // 0 ~ 30
         update_led(active_led.id, LED_STATE_BLINK);
@@ -302,6 +314,7 @@ void handle_usb_current_max_update(void) {
 int main(void) {
     int bat_capacity_new, bat_capacity_fd;
     int usb_current_max_new, usb_current_max_fd;
+    int usb_online_new, usb_online_fd;
 
     // Determine LED support
     if (!file_is_writeable(led_brightness_paths[BLUE])) {
@@ -340,9 +353,15 @@ int main(void) {
     reset_all_leds();
 
     // Open
+    usb_online_fd = open(USB_ONLINE_PATH, O_RDONLY);
+    if (usb_online_fd < 0) {
+        LOG_ERROR("Failed to open usb online\n");
+        goto error;
+    }
     bat_capacity_fd = open(BAT_CAPACITY_PATH, O_RDONLY);
     if (bat_capacity_fd < 0) {
         LOG_ERROR("Failed to open battery capacity\n");
+        close(usb_online_fd);
         goto error;
     }
     usb_current_max_fd = open(USB_CURRENT_MAX_PATH, O_RDONLY);
@@ -354,21 +373,26 @@ int main(void) {
 
     // Read
     while (true) {
+        if (read_fd_to_int(usb_online_fd, &usb_online_new)) {
+            if (usb_online != usb_online_new) usb_online = usb_online_new;
+        } else {
+            LOG_ERROR("Error in reading usb online\n");
+            goto error_fd;
+        }
+
         if (read_fd_to_int(bat_capacity_fd, &bat_capacity_new)) {
-            if (bat_capacity != bat_capacity_new) {
-                bat_capacity = bat_capacity_new;
+            if (bat_capacity != bat_capacity_new) bat_capacity = bat_capacity_new;
 #ifdef DEBUG
-                LOG_INFO("Handle battery capacity update, bat_capacity = %d\n", bat_capacity);
+            LOG_INFO("Handle battery capacity update, bat_capacity = %d\n", bat_capacity);
 #endif
-                (*handle_battery_capacity_update_callback)();
-            }
+           (*handle_battery_capacity_update_callback)();
         } else {
             LOG_ERROR("Error in reading battery capacity\n");
             goto error_fd;
         }
 
         if (read_fd_to_int(usb_current_max_fd, &usb_current_max_new)) {
-            if (usb_current_max != usb_current_max_new) {
+            if (usb_online && (usb_current_max != usb_current_max_new)) {
                 usb_current_max = usb_current_max_new;
 #ifdef DEBUG
                 LOG_INFO("Handle usb current_max update, usb_current_max = %d\n", usb_current_max);
@@ -384,11 +408,13 @@ int main(void) {
     }
 
     // We should never reach here
+    close(usb_online_fd);
     close(bat_capacity_fd);
     close(usb_current_max_fd);
     return 0;
 
 error_fd:
+    close(usb_online_fd);
     close(bat_capacity_fd);
     close(usb_current_max_fd);
 error:
