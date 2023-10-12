@@ -9,6 +9,7 @@ cc_binary {
     srcs: [
         "main.c",
     ],
+    shared_libs: ["libcutils"],
     target: {
         recovery: {
             cflags: ["-DRECOVERY"],
