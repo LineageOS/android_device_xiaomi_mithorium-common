@@ -10,11 +10,6 @@ cc_binary {
         "main.c",
     ],
     shared_libs: ["libcutils"],
-    target: {
-        recovery: {
-            cflags: ["-DRECOVERY"],
-        },
-    },
     init_rc: ["charger_led.rc"],
     recovery_available: true,
     vendor: true
