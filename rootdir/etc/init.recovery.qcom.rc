@@ -87,5 +87,4 @@ service charger_led /system/bin/charger_led
     user system
     group system
     seclabel u:r:charger_led:s0
-    stdio_to_kmsg
     oneshot
