@@ -1,3 +1,4 @@
+#include <cutils/klog.h>
 #include <fcntl.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -20,9 +21,15 @@
 
 #define LED_PATH(led, file) "/sys/class/leds/" led "/" file
 
+#ifdef DEBUG
 #define LOG_TAG "charger_led: "
 #define LOG_ERROR(...) fprintf(stderr, LOG_TAG __VA_ARGS__)
 #define LOG_INFO(...) fprintf(stdout, LOG_TAG __VA_ARGS__)
+#else
+#define LOG_TAG "charger_led"
+#define LOG_ERROR(x...) KLOG_ERROR(LOG_TAG, x)
+#define LOG_INFO(x...) KLOG_INFO(LOG_TAG, x)
+#endif
 
 // Definitions
 enum led_types { LED_UNKNOWN = 0, WHITE, RED, GREEN, BLUE, LED_TYPES_MAX };
