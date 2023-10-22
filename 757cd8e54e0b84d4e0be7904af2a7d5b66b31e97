@@ -39,6 +39,23 @@
       "message": "You can do this instead i guess: https://gerrit.aospa.co/c/AOSPA/android_device_xiaomi_mi439/+/35679",
       "revId": "757cd8e54e0b84d4e0be7904af2a7d5b66b31e97",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65de1549_8d1e8652",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2023-10-22T11:12:45Z",
+      "side": 1,
+      "message": "android.hardware.wifi@1.0-service-legacy into lineage interfaces repo.",
+      "revId": "757cd8e54e0b84d4e0be7904af2a7d5b66b31e97",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
