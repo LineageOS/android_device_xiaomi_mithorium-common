@@ -56,6 +56,24 @@
       "message": "android.hardware.wifi@1.0-service-legacy into lineage interfaces repo.",
       "revId": "757cd8e54e0b84d4e0be7904af2a7d5b66b31e97",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "59ddd1cf_3641e3b8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2023-10-24T09:49:13Z",
+      "side": 1,
+      "message": "uh, one android.hardware.wifi@1.0-service.legacy already exists there",
+      "parentUuid": "65de1549_8d1e8652",
+      "revId": "757cd8e54e0b84d4e0be7904af2a7d5b66b31e97",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
