@@ -4,6 +4,9 @@ vendor.qcom.bluetooth.soc=pronto
 # Camera
 persist.vendor.camera.HAL3.enabled=1
 
+# Charger
+ro.enable_boot_charger_mode=1
+
 # Display
 debug.sf.enable_hwc_vds=1
 debug.sf.hw=0
