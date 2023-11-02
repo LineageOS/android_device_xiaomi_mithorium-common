@@ -22,6 +22,30 @@
       },
       "revId": "d967bff8de2f77bf72ceda31107569adc84ee731",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "11ceaa24_a38366af",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2023-11-02T14:55:25Z",
+      "side": 1,
+      "message": "It\u0027s not applicable for k4.19, the file security/pfe/pfk.c doesn\u0027t exist there\n\nI\u0027m using LineageOS/android_kernel_qcom_sm8250 as k4.19 base, btw",
+      "parentUuid": "5242c54f_c4f57101",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 59
+      },
+      "revId": "d967bff8de2f77bf72ceda31107569adc84ee731",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
