@@ -16,6 +16,23 @@
       "message": "move to lineage-21 branch",
       "revId": "02bf880a269bf663402339b0322b3570593046ac",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1f02687_61fb1f46",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2023-11-02T14:49:12Z",
+      "side": 1,
+      "message": "You know that you can move changes to a different branch using gerrit UI, right? That way you avoid duplicates, but w/e.",
+      "revId": "02bf880a269bf663402339b0322b3570593046ac",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
