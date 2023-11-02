@@ -34,6 +34,24 @@
       "parentUuid": "ebe174c6_ff8bb4b6",
       "revId": "75c52638fb275bfe419fd599fee1ba47a99bb886",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f93d064_a0d22c45",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2023-11-02T04:48:07Z",
+      "side": 1,
+      "message": "as I know, someone else is also getting the exactly same logspam",
+      "parentUuid": "6cfd91ea_396a6974",
+      "revId": "75c52638fb275bfe419fd599fee1ba47a99bb886",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
