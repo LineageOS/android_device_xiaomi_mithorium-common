@@ -16,6 +16,24 @@
       "message": "You should move this to an earlier point in the chain, since you can\u0027t really boot without this.",
       "revId": "75c52638fb275bfe419fd599fee1ba47a99bb886",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6cfd91ea_396a6974",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2023-11-02T04:37:44Z",
+      "side": 1,
+      "message": "I\u0027ve actually booted it without updatable APEX, on AOSP 14 r2 and r11 tags, even on official 14 GSI from DSU menu in developer settings... now I\u0027m enabling it just to be safe\n\nOkay, I\u0027ll move it whenever I have time\n\nBTW, Do you have any idea about why this error spams on dmesg when APEX compression is enabled? (kernel 4.19) It spams really a lot and makes dmesg barely readable...\n```\n[   37.541041] loop25: rw\u003d0, want\u003d26264, limit\u003d25992\n[   37.541042] attempt to access beyond end of device\n\n```",
+      "parentUuid": "ebe174c6_ff8bb4b6",
+      "revId": "75c52638fb275bfe419fd599fee1ba47a99bb886",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
