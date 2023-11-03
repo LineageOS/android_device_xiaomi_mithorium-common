@@ -16,6 +16,24 @@
       "message": "that has been proven to be true for me on android-14.0.0_r11, needs further testing when later tags comes",
       "revId": "6254cac06d0ddaffa0b7982e45cd82e4a44ac8ad",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4caa2a74_2c9ff757",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2023-11-03T05:59:48Z",
+      "side": 1,
+      "message": "tested with both k4.9 and k4.19\n\nupdatable apex works fine for me on LOS20, btw",
+      "parentUuid": "2648c7df_68de0d06",
+      "revId": "6254cac06d0ddaffa0b7982e45cd82e4a44ac8ad",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
