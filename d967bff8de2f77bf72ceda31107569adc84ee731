@@ -46,6 +46,30 @@
       },
       "revId": "d967bff8de2f77bf72ceda31107569adc84ee731",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "be42f796_3f22d774",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2023-11-03T04:12:43Z",
+      "side": 1,
+      "message": "oh nevermind, the first one was probably caused by another issue, and not related to userdata encryption\n\nthe second one is real tho",
+      "parentUuid": "11ceaa24_a38366af",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 59
+      },
+      "revId": "d967bff8de2f77bf72ceda31107569adc84ee731",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
