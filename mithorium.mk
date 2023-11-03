@@ -5,8 +5,8 @@
 #
 
 # APEX
+OVERRIDE_TARGET_FLATTEN_APEX := true
 OVERRIDE_PRODUCT_COMPRESSED_APEX := false
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Userspace Reboot
 $(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
