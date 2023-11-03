@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee557127_ac0069af",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2023-11-03T16:21:17Z",
+      "side": 1,
+      "message": "got fix for this issue:\nDisable CONFIG_DM_ANDROID_VERITY",
+      "revId": "af0659c8ed7252e7b1c131093de0f57be1029286",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
