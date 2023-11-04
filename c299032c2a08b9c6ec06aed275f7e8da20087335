@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "987b187b_bc1270e2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16779
+      },
+      "writtenOn": "2023-11-04T13:15:47Z",
+      "side": 1,
+      "message": "You should drop this if you\u0027re going to switch to the legacy HAL",
+      "revId": "c299032c2a08b9c6ec06aed275f7e8da20087335",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
