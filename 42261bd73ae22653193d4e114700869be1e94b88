@@ -16,6 +16,24 @@
       "message": "Why do you need booting from SD card?",
       "revId": "42261bd73ae22653193d4e114700869be1e94b88",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab7d855d_1e9ad621",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2023-11-23T06:43:09Z",
+      "side": 1,
+      "message": "1) so that I can always test the builds regardless of what I have on internal eMMC\n\n(not meaning I\u0027d have to test official LOS builds on sdcard a lot, but this chain of commits is also required for the internal eMMC OS to boot up when sdcard with OS is inserted)\n\n2) some users have unhealthy eMMC, maybe this would provide a way to extend their device\u0027s life a bit (?)\n\n3) I can do more experiments while the OS is on sdcard\n\n4) Dual boot, XD",
+      "parentUuid": "7d89fa0c_769d16bd",
+      "revId": "42261bd73ae22653193d4e114700869be1e94b88",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
