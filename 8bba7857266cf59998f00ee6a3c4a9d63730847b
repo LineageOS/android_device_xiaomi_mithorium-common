@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97831b60_50b5991e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-12-01T15:35:55Z",
+      "side": 1,
+      "message": "LineageOS 21 is not getting shipped anytime soon",
+      "revId": "8bba7857266cf59998f00ee6a3c4a9d63730847b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
