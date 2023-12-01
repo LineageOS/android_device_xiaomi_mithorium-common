@@ -86,6 +86,9 @@ on early-boot
 on late-fs
     mount_all /vendor/etc/fstab.qcom --late
 
+on late-fs && property:ro.boot.bootdevice=7824900.sdhci
+    mount_all /vendor/etc/fstab.external
+
 #start camera server as daemon
 service vendor.qcamerasvr /system/vendor/bin/mm-qcamera-daemon
     class late_start

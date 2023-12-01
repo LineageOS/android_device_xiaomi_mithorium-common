@@ -4,6 +4,14 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
+// fstab
+
+prebuilt_etc {
+    name: "fstab.external",
+    src: "etc/fstab.external",
+    vendor: true,
+}
+
 // Init scripts
 
 prebuilt_etc {
