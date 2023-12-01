@@ -100,6 +100,10 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 # GRF/VF
 BOARD_SHIPPING_API_LEVEL := 30
 
+# HAL Override
+USE_DEVICE_SPECIFIC_MEDIA := true
+DEVICE_SPECIFIC_MEDIA_PATH := $(COMMON_PATH)/hal/media
+
 # Health
 TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/power_supply/battery/battery_charging_enabled
 
