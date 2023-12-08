@@ -52,7 +52,11 @@
 /persist/sensors(/.*)?                          u:object_r:sensors_persist_file:s0
 
 # Subsystems
-/sys/devices(/platform)?/soc/4080000\.qcom,mss/subsys[0-9]/state	u:object_r:sysfs_modem_subsys:s0
+/sys/devices(/platform)?/soc/1de0000\.qcom,venus/subsys[0-9]/restart_level	u:object_r:sysfs_ssr_toggle:s0
+/sys/devices(/platform)?/soc/4080000\.qcom,mss/subsys[0-9]/restart_level	u:object_r:sysfs_ssr_toggle:s0
+/sys/devices(/platform)?/soc/4080000\.qcom,mss/subsys[0-9]/state		u:object_r:sysfs_modem_subsys:s0
+/sys/devices(/platform)?/soc/a21b000\.qcom,pronto/subsys[0-9]/restart_level	u:object_r:sysfs_ssr_toggle:s0
+/sys/devices(/platform)?/soc/c200000\.qcom,lpass/subsys[0-9]/restart_level	u:object_r:sysfs_ssr_toggle:s0
 
 # Sys files
 /sys/devices(/platform)?/soc/[a-f0-9]+.sdhci/mmc_host/mmc[0-9]/mmc0:[0-9]+(/.*)?	u:object_r:sysfs_mmc_host:s0

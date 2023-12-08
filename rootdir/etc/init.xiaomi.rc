@@ -74,17 +74,6 @@ on boot && property:ro.boot.bootdevice=7864900.sdhci
     symlink /dev/block/platform/soc/7824900.sdhci/by-name/fsc /dev/block/bootdevice/by-name/fsc
     symlink /dev/block/platform/soc/7824900.sdhci/by-name/fsg /dev/block/bootdevice/by-name/fsg
 
-# Subsystem Restart
-on init
-    # Setup all the sub-system as related
-    write /sys/bus/msm_subsys/devices/subsys0/restart_level RELATED
-    write /sys/bus/msm_subsys/devices/subsys1/restart_level RELATED
-    write /sys/bus/msm_subsys/devices/subsys2/restart_level RELATED
-    write /sys/bus/msm_subsys/devices/subsys3/restart_level RELATED
-    write /sys/bus/msm_subsys/devices/subsys4/restart_level RELATED
-    write /sys/bus/msm_subsys/devices/subsys5/restart_level RELATED
-    write /sys/bus/msm_subsys/devices/subsys6/restart_level RELATED
-
 # Time
 on property:sys.boot_completed=1
     restart time_daemon

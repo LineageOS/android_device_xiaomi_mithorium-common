@@ -28,6 +28,9 @@ vendor.vidc.disable.split.mode=1
 # Radio
 persist.vendor.radio.mt_sms_ack=30
 
+# Subsystem Restart
+persist.vendor.ssr.restart_level=ALL_ENABLE
+
 af.fast_track_multiplier=1
 audio.offload.min.duration.secs=30
 drm.service.enabled=true
