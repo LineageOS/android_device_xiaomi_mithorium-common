@@ -37,4 +37,5 @@ set_prop(vendor_init, vendor_dataqdp_prop);
 set_prop(vendor_init, vendor_fm_prop);
 set_prop(vendor_init, vendor_qcom_ims_prop);
 set_prop(vendor_init, vendor_sensors_dbg_prop);
+set_prop(vendor_init, vendor_ssr_prop);
 set_prop(vendor_init, vendor_video_prop);
