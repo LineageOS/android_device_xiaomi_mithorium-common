@@ -39,6 +39,7 @@ TARGET_KERNEL_CONFIG := \
     vendor/common.config \
     vendor/debugfs.config \
     vendor/feature/android-12.config \
+    vendor/feature/erofs.config \
     vendor/feature/lmkd.config
 
 # ANT
@@ -96,6 +97,7 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 LOC_HIDL_VERSION := 4.0
 
 # Filesystem
+BOARD_EROFS_PCLUSTER_SIZE := 262144
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # GRF/VF
