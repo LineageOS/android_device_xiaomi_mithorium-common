@@ -1,6 +1,6 @@
 # All unpinned blobs below are extracted from Nokia/Panther_00WW/PAN_sprout:11/RKQ1.200928.002/00WW_3_240:user/release-keys
 # FP3 Package version: Fairphone/FP3/FP3:11/8901.4.A.0019.1/gms-edfd6a4e:user/release-keys
-# sweet Package version: Redmi/sweet_global/sweet:12/SKQ1.210908.001/V13.0.3.0.SKFMIXM:user/release-keys
+# sweet Package version: qti/missi/missi:13/TKQ1.221114.001/V14.0.4.0.THGMIXM:user/release-keys
 
 # Audiosphere
 system_ext/etc/permissions/audiosphere.xml
