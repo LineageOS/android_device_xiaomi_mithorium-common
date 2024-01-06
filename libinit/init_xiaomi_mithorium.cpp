@@ -9,5 +9,6 @@
 #include "vendor_init.h"
 
 void vendor_load_properties() {
+    set_bootloader_prop();
     set_dalvik_heap();
 }
