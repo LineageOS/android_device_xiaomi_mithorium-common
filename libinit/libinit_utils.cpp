@@ -74,3 +74,23 @@ std::string fingerprint_to_description(std::string fingerprint) {
 
     return description;
 }
+
+void set_bootloader_prop(void) {
+    std::string file = "/sys/devices/soc0/images";
+    std::ifstream fp(file);
+    if (!fp) {
+        return;
+    }
+
+    std::string line;
+    std::size_t found;
+    while (std::getline(fp, line)) {
+        // "  CRM:  00:BOOT.BF.3.3-00214"
+        found = line.rfind("BOOT.");
+        if (found != line.npos) {
+            // "BOOT.BF.3.3-00214"
+            property_override("ro.bootloader", line.substr(found));
+            return;
+        }
+    }
+}
