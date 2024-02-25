@@ -238,6 +238,9 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor
 
+# Images
+PRODUCT_BUILD_VENDOR_RAMDISK_IMAGE := true
+
 # IMS
 PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.3 \
