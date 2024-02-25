@@ -78,6 +78,21 @@ on property:vendor.subsys_state_notifier.modem.state=ONLINE
     start vendor.qcrild
     start vendor.qcrild2
 
+# Serial console
+service console /system/bin/sh
+    class core
+    console
+    disabled
+    override
+    user root
+    group root shell log readproc
+    seclabel u:r:su:s0
+    setenv HOSTNAME console
+
+# This is not present on recovery init.rc
+on init && property:ro.debuggable=1
+    start console
+
 # SDHCI
 on early-fs
     write /sys/kernel/sdhci_msm/add_host 1

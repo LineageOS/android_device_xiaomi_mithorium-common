@@ -65,3 +65,18 @@ service hvdcp_opti /system/bin/hvdcp_opti
     user root
     group system wakelock
     seclabel u:r:hvdcp:s0
+
+# Serial console
+service console /system/bin/sh
+    class core
+    console
+    disabled
+    override
+    user root
+    group root shell log readproc
+    seclabel u:r:su:s0
+    setenv HOSTNAME console
+
+# This is not present on recovery init.rc
+on init && property:ro.debuggable=1
+    start console
