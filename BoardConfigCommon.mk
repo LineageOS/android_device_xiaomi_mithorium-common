@@ -36,7 +36,8 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
 TARGET_KERNEL_VERSION := 4.19
 
 TARGET_KERNEL_CONFIG := \
-    vendor/msm8937-perf_defconfig \
+    gki_defconfig \
+    vendor/msm8937_QGKI.config \
     vendor/common.config \
     vendor/debugfs.config \
     vendor/feature/android-12.config \
