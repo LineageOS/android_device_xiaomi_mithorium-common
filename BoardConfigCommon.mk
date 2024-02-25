@@ -27,23 +27,18 @@ BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci loop.max_part=7
-BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery printk.devkmsg=on androidboot.boot_devices=soc/7824900.sdhci
-#BOARD_KERNEL_CMDLINE += androidboot.first_stage_console=0 console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0
+BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery printk.devkmsg=on androidboot.boot_devices=soc/7824900.sdhci earlycon=msm_serial,0x78b0000
+BOARD_KERNEL_CMDLINE += androidboot.first_stage_console=1 console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_NO_GCC := true
-TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
-TARGET_KERNEL_VERSION := 4.19
+TARGET_KERNEL_SOURCE := kernel/xiaomi/5.4
+TARGET_KERNEL_VERSION := 5.4
 
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \
-    vendor/msm8937_QGKI.config \
-    vendor/common.config \
-    vendor/debugfs.config \
-    vendor/feature/android-12.config \
-    vendor/feature/erofs.config \
-    vendor/feature/lmkd.config
+    tmp_bak/msm8937_y.config
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
