@@ -142,8 +142,7 @@ PRODUCT_COPY_FILES += \
 
 # Charger
 PRODUCT_PACKAGES += \
-    charger_led \
-    charger_led_recovery
+    charger_led
 
 # Configstore
 PRODUCT_PACKAGES += \
