@@ -35,6 +35,7 @@ BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := \
+    androidboot.first_stage_console=0 \
     bootconfig \
     ehci-hcd.park=3 \
     loop.max_part=7 \

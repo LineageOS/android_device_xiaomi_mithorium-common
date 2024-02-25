@@ -193,6 +193,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# First stage console
+PRODUCT_PACKAGES += \
+    linker.vendor_ramdisk \
+    shell_and_utilities_vendor_ramdisk
+
 # FM
 PRODUCT_PACKAGES += \
     FMRadio \
