@@ -34,6 +34,7 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := \
+    androidboot.first_stage_console=0 \
     bootconfig \
     ehci-hcd.park=3 \
     loop.max_part=7 \
