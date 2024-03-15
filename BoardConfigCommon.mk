@@ -101,9 +101,6 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(COMMON_PATH)/framework_compatibility_matrix.xml
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(COMMON_PATH)/framework_manifest.xml
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
-ifneq ($(TARGET_HAS_NO_CONSUMERIR),true)
-DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/manifest/consumerir.xml
-endif
 ifneq ($(TARGET_USES_DEVICE_SPECIFIC_GATEKEEPER),true)
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/manifest/gatekeeper.xml
 endif

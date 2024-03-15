@@ -148,8 +148,7 @@ PRODUCT_PACKAGES += \
 # Consumer IR
 ifneq ($(TARGET_HAS_NO_CONSUMERIR),true)
 PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-impl \
-    android.hardware.ir@1.0-service
+    android.hardware.ir-service.example
 endif
 
 # Device-specific Settings
