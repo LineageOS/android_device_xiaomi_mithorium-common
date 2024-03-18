@@ -133,6 +133,7 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/dsp:/dsp \
     /vendor/firmware_mnt:/firmware \
     /mnt/vendor/persist:/persist
+BOARD_SUPER_IMAGE_IN_UPDATE_PACKAGE := true
 
 # Power
 TARGET_USES_INTERACTION_BOOST := true
