@@ -10,6 +10,7 @@ from locale import LC_ALL, setlocale, strcoll
 from pathlib import Path
 
 FILES = [Path(file) for file in [
+    "proprietary-files-misc.txt",
     "proprietary-files-qc-sys.txt",
     "proprietary-files-qc-vndr.txt",
     "proprietary-files-qc-vndr-32.txt",
