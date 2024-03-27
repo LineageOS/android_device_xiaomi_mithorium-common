@@ -78,6 +78,9 @@ on property:vendor.subsys_state_notifier.modem.state=ONLINE
     start vendor.qcrild
     start vendor.qcrild2
 
+on property:init.svc.vendor.qcrild=running
+    restart vendor.radio-config-1-1-wrapper
+
 # SDHCI
 on early-fs
     write /sys/kernel/sdhci_msm/add_host 1
