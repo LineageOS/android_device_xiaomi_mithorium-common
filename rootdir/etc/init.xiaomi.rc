@@ -78,8 +78,8 @@ on property:vendor.subsys_state_notifier.modem.state=ONLINE
     start vendor.qcrild
     start vendor.qcrild2
 
-on property:init.svc.vendor.qcrild=running
-    restart vendor.radio-config-1-1-wrapper
+on property:init.svc.vendor.qcrild=stopped
+    stop vendor.radio-config-1-1-wrapper
 
 # SDHCI
 on early-fs
