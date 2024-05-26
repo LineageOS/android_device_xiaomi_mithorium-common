@@ -326,8 +326,7 @@ PRODUCT_PACKAGES += \
 
 # Perf
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.perf@2.2 \
-    vendor.qti.hardware.perf@2.2.vendor
+    libqti-perfd-client
 
 # Power
 PRODUCT_PACKAGES += \
@@ -402,6 +401,7 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
+    hardware/qcom-caf/common/libqti-perfd-client \
     $(LOCAL_PATH)
 
 # Speed profile services and wifi-service to reduce RAM and storage
