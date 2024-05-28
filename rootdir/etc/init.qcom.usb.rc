@@ -108,7 +108,7 @@ on property:vendor.usb.controller=*
 #on property:persist.vendor.usb.config=*
 #    setprop persist.sys.usb.config ${persist.vendor.usb.config}
 
-on boot && property:ro.boot.usbconfigfs=true
+on boot
         setprop sys.usb.configfs 1
 
 #

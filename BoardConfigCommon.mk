@@ -27,7 +27,7 @@ BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci loop.max_part=7
-BOARD_KERNEL_CMDLINE += androidboot.usbconfigfs=true androidboot.init_fatal_reboot_target=recovery printk.devkmsg=on androidboot.boot_devices=soc/7824900.sdhci
+BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery printk.devkmsg=on androidboot.boot_devices=soc/7824900.sdhci
 BOARD_KERNEL_CMDLINE += androidboot.first_stage_console=1 console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_PAGESIZE :=  2048
