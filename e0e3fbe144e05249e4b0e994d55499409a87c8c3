@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3f2729f_d5924328",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2024-06-02T21:18:26Z",
+      "side": 1,
+      "message": "[  236.359653] SELinux: avc:  denied  { add } for pid\u003d5570 uid\u003d1047 name\u003dandroid.hardware.camera.provider.ICameraProvider/external/0 scontext\u003du:r:hal_camera_default:s0 tcontext\u003du:object_r:default_android_service:s0 tclass\u003dservice_manager permissive\u003d1\n\n06-02 18:26:19.794  5570  5571 E ExtCamDev: trimSupportedFormats: input format list is empty!\n06-02 18:26:19.794  5570  5571 E ExtCamDev: trimSupportedFormats: input format list is empty!\n06-02 18:26:19.795  5570  5571 E ExtCamDev: initSupportedFormatsLocked: cannot find suitable cropping type!\n06-02 18:26:19.795  5570  5571 E ExtCamDev: initOutputCharsKeys: Init supported format list failed\n06-02 18:26:19.795  5570  5571 E ExtCamDev: initCameraCharacteristics: init output characteristics key failed: errorno -2147483648\n06-02 18:26:19.797  5570  5571 E ExtCamDev: isInitFailedLocked: init camera characteristics failed: errorno -2147483648\n06-02 18:26:19.797  5570  5571 W ExtCamPrvdr: deviceAdded: Attempt to init camera device /dev/video4 failed!\n06-02 18:26:19.799  5570  5571 W ExtCamPrvdr: deviceAdded device /dev/video5 does not support VIDEO_CAPTURE",
+      "revId": "e0e3fbe144e05249e4b0e994d55499409a87c8c3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
