@@ -38,6 +38,7 @@ persist.vendor.radio.mt_sms_ack=30
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # USB
+ro.usb.uvc.enabled=true
 vendor.usb.controller=msm_hsusb
 vendor.usb.diag.func.name=diag
 vendor.usb.use_ffs_mtp=1
