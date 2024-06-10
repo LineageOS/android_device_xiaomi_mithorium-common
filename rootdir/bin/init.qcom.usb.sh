@@ -180,7 +180,8 @@ esac
 #
 # Initialize UVC conifguration.
 #
-if [ -d /config/usb_gadget/g1/functions/uvc.0 ]; then
+#if [ -d /config/usb_gadget/g1/functions/uvc.0 ]; then
+if false; then
 	cd /config/usb_gadget/g1/functions/uvc.0
 
 	echo 3072 > streaming_maxpacket
