@@ -180,55 +180,80 @@ esac
 #
 # Initialize UVC conifguration.
 #
-if [ -d /config/usb_gadget/g1/functions/uvc.0 ]; then
-	cd /config/usb_gadget/g1/functions/uvc.0
+# Ref: https://docs.kernel.org/usb/gadget_uvc.html
+CONFIGFS="/config"
+GADGET="$CONFIGFS/usb_gadget/g1"
+FUNCTION="$GADGET/functions/uvc.0"
+create_frame() {
+	# Example usage:
+	# create_frame <width> <height> <group> <format name>
 
-	echo 3072 > streaming_maxpacket
-	echo 1 > streaming_maxburst
-	mkdir control/header/h
-	ln -s control/header/h control/class/fs/
-	ln -s control/header/h control/class/ss
+	WIDTH=$1
+	HEIGHT=$2
+	FORMAT=$3
+	NAME=$4
 
-	mkdir -p streaming/uncompressed/u/360p
-	echo "666666\n1000000\n5000000\n" > streaming/uncompressed/u/360p/dwFrameInterval
+	# HACK for mithorium devices: Swap x and y
+	WIDTH=$2
+	HEIGHT=$1
 
-	mkdir -p streaming/uncompressed/u/720p
-	echo 1280 > streaming/uncompressed/u/720p/wWidth
-	echo 720 > streaming/uncompressed/u/720p/wWidth
-	echo 29491200 > streaming/uncompressed/u/720p/dwMinBitRate
-	echo 29491200 > streaming/uncompressed/u/720p/dwMaxBitRate
-	echo 1843200 > streaming/uncompressed/u/720p/dwMaxVideoFrameBufferSize
-	echo 5000000 > streaming/uncompressed/u/720p/dwDefaultFrameInterval
-	echo "5000000\n" > streaming/uncompressed/u/720p/dwFrameInterval
+	wdir=$FUNCTION/streaming/$FORMAT/$NAME/${HEIGHT}p
 
-	mkdir -p streaming/mjpeg/m/360p
-	echo "666666\n1000000\n5000000\n" > streaming/mjpeg/m/360p/dwFrameInterval
+	mkdir -p $wdir
+	echo $WIDTH > $wdir/wWidth
+	echo $HEIGHT > $wdir/wHeight
+	echo $(( $WIDTH * $HEIGHT * 2 )) > $wdir/dwMaxVideoFrameBufferSize
+	cat <<EOF > $wdir/dwFrameInterval
+166666
+333333
+416666
+666666
+EOF
+}
 
-	mkdir -p streaming/mjpeg/m/720p
-	echo 1280 > streaming/mjpeg/m/720p/wWidth
-	echo 720 > streaming/mjpeg/m/720p/wWidth
-	echo 29491200 > streaming/mjpeg/m/720p/dwMinBitRate
-	echo 29491200 > streaming/mjpeg/m/720p/dwMaxBitRate
-	echo 1843200 > streaming/mjpeg/m/720p/dwMaxVideoFrameBufferSize
-	echo 5000000 > streaming/mjpeg/m/720p/dwDefaultFrameInterval
-	echo "5000000\n" > streaming/mjpeg/m/720p/dwFrameInterval
+if [ -d $FUNCTION ]; then
+	cd $FUNCTION
 
-	echo 0x04 > /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m/bmaControls
+	echo -n "Android Webcam" > function_name
 
-	mkdir -p streaming/h264/h/960p
-	echo 1920 > streaming/h264/h/960p/wWidth
-	echo 960 > streaming/h264/h/960p/wWidth
-	echo 40 > streaming/h264/h/960p/bLevelIDC
-	echo "333667\n" > streaming/h264/h/960p/dwFrameInterval
+	# Formats and Frames
+	create_frame 640 360 mjpeg mjpeg
+	create_frame 640 480 mjpeg mjpeg
+	create_frame 1280 720 mjpeg mjpeg
+	create_frame 1920 1080 mjpeg mjpeg
+	create_frame 640 360 uncompressed yuyv
+	create_frame 640 480 uncompressed yuyv
+	create_frame 1280 720 uncompressed yuyv
+	create_frame 1920 1080 uncompressed yuyv
 
-	mkdir -p streaming/h264/h/1920p
-	echo "333667\n" > streaming/h264/h/1920p/dwFrameInterval
+	# Header linking
+	mkdir $FUNCTION/streaming/header/h
+	if [ $? -eq 0 ]; then
+		# This section links the format descriptors and their associated frames
+		# to the header
+		cd $FUNCTION/streaming/header/h
+		ln -s ../../uncompressed/yuyv
+		ln -s ../../mjpeg/mjpeg
+		# This section ensures that the header will be transmitted for each
+		# speed's set of descriptors. If support for a particular speed is not
+		# needed then it can be skipped here.
+		cd ../../class/fs
+		ln -s ../../header/h
+		cd ../../class/hs
+		ln -s ../../header/h
+		cd ../../class/ss
+		ln -s ../../header/h
+		cd ../../../control
+		mkdir header/h
+		ln -s header/h class/fs
+		ln -s header/h class/ss
+	fi
 
-	mkdir streaming/header/h
-	ln -s streaming/uncompressed/u streaming/header/h
-	ln -s streaming/mjpeg/m streaming/header/h
-	ln -s streaming/h264/h streaming/header/h
-	ln -s streaming/header/h streaming/class/fs/
-	ln -s streaming/header/h streaming/class/hs/
-	ln -s streaming/header/h streaming/class/ss/
+	# Bandwidth configuration
+	# streaming_interval sets bInterval. Values range from 1..255
+	echo 1 > $FUNCTION/streaming_interval
+	# streaming_maxpacket sets wMaxPacketSize. Valid values are 1024/2048/3072
+	echo 3072 > $FUNCTION/streaming_maxpacket
+	# streaming_maxburst sets bMaxBurst. Valid values are 1..15
+	echo 1 > $FUNCTION/streaming_maxburst
 fi
