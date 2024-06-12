@@ -402,6 +402,7 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/usb/etc \
     $(LOCAL_PATH)
 
 # Speed profile services and wifi-service to reduce RAM and storage

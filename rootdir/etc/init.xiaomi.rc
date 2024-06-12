@@ -96,6 +96,10 @@ on boot && property:ro.boot.bootdevice=7864900.sdhci
 on property:sys.boot_completed=1
     restart time_daemon
 
+# USB
+on property:ro.product.vendor.model=*
+    setprop vendor.usb.product_string ${ro.product.vendor.model}
+
 # Wi-Fi
 on init
     chown wifi wifi /sys/module/wlan/parameters/fwpath
