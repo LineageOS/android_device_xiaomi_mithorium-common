@@ -267,6 +267,9 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
+# Kernel
+PRODUCT_ENABLE_UFFD_GC := false
+
 # Keymaster HAL
 ifneq ($(TARGET_USES_DEVICE_SPECIFIC_KEYMASTER),true)
 PRODUCT_PACKAGES += \
