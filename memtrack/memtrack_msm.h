@@ -14,11 +14,12 @@
  * limitations under the License.
  */
 
+#include "Memtrack.h"
+
 #ifndef _MEMTRACK_MSM_H_
 #define _MEMTRACK_MSM_H_
 
-int kgsl_memtrack_get_memory(pid_t pid, enum memtrack_type type,
-                             struct memtrack_record *records,
-                             size_t *num_records);
+int kgsl_memtrack_get_memory(int pid, aidl::android::hardware::memtrack::MemtrackType type,
+                             std::vector<aidl::android::hardware::memtrack::MemtrackRecord>* _aidl_return);
 
 #endif
