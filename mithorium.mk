@@ -168,9 +168,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8937
 
 PRODUCT_PACKAGES += \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service \
-    memtrack.msm8937
+    android.hardware.memtrack-service.xiaomi_mithorium
 
 PRODUCT_PACKAGES += \
     libdisplayconfig \
