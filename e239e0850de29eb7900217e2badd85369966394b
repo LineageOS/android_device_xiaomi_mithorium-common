@@ -16,6 +16,24 @@
       "message": "Do we still need our radio config wrapper with this? https://cs.android.com/android/platform/superproject/main/+/main:hardware/interfaces/radio/aidl/compat/service/radio-compat.xml",
       "revId": "e239e0850de29eb7900217e2badd85369966394b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "53f09b49_bdd9948f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2024-06-22T14:30:57Z",
+      "side": 1,
+      "message": "If we add radio config 1.0 backend support to that wrapper, then no",
+      "parentUuid": "a6ff5dfc_c83ad959",
+      "revId": "e239e0850de29eb7900217e2badd85369966394b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
