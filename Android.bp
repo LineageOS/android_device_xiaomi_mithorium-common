@@ -1,2 +1,42 @@
 soong_namespace {
 }
+
+soong_config_module_type {
+    name: "mithorium_firmware_wlan_mac_bin_install_symlink",
+    module_type: "install_symlink",
+    config_namespace: "MITHORIUM_FIRMWARE_WLAN_MAC_BIN",
+    value_variables: ["SYMLINK_TARGET"],
+    properties: ["symlink_target"],
+}
+
+mithorium_firmware_wlan_mac_bin_install_symlink {
+    name: "firmware_wlan_mac.bin_symlink",
+    vendor: true,
+    installed_location: "firmware/wlan/prima/wlan_mac.bin",
+    soong_config_variables: {
+        SYMLINK_TARGET: {
+            symlink_target: "%s",
+        },
+    },
+}
+
+install_symlink {
+    name: "firmware_WCNSS_qcom_cfg.ini_symlink",
+    vendor: true,
+    installed_location: "firmware/wlan/prima/WCNSS_qcom_cfg.ini",
+    symlink_target: "/vendor/etc/wifi/WCNSS_qcom_cfg.ini",
+}
+
+install_symlink {
+    name: "firmware_WCNSS_qcom_wlan_nv.bin_symlink",
+    vendor: true,
+    installed_location: "firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin",
+    symlink_target: "/mnt/vendor/persist/WCNSS_qcom_wlan_nv.bin",
+}
+
+install_symlink {
+    name: "firmware_WCNSS_wlan_dictionary.dat_symlink",
+    vendor: true,
+    installed_location: "firmware/wlan/prima/WCNSS_wlan_dictionary.dat",
+    symlink_target: "/mnt/vendor/persist/WCNSS_wlan_dictionary.dat",
+}
