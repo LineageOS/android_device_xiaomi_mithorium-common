@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d4136227_11305738",
+        "filename": "proprietary-files-qc-vndr.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-06-24T11:25:38Z",
+      "side": 1,
+      "message": "qti_symlink",
+      "range": {
+        "startLine": 39,
+        "startChar": 67,
+        "endLine": 39,
+        "endChar": 85
+      },
+      "revId": "51a60d814fa5ade23c847f220101b681f6e36ac5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
