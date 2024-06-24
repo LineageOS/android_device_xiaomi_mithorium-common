@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5f6f700_bcd202b5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2024-06-24T13:59:58Z",
+      "side": 1,
+      "message": "Hope it\u0027ll be optional for upgrade devices...",
+      "revId": "e29fb315669a88ff5dfb3c45f14b741df9049d2d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
