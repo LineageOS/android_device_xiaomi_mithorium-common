@@ -22,6 +22,30 @@
       },
       "revId": "51a60d814fa5ade23c847f220101b681f6e36ac5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "27abfa72_4c614887",
+        "filename": "proprietary-files-qc-vndr.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2024-06-24T13:59:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d4136227_11305738",
+      "range": {
+        "startLine": 39,
+        "startChar": 67,
+        "endLine": 39,
+        "endChar": 85
+      },
+      "revId": "51a60d814fa5ade23c847f220101b681f6e36ac5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
