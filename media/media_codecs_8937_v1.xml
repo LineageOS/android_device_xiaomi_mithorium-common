@@ -108,8 +108,6 @@ Only the three quirks included above are recognized at this point:
 -->
 
 <MediaCodecs>
-    <Include href="media_codecs_vendor_audio.xml" />
-    <Include href="media_codecs_google_telephony.xml" />
     <Settings>
         <Setting name="max-video-encoder-input-buffers" value="9" />
     </Settings>
@@ -241,5 +239,4 @@ Only the three quirks included above are recognized at this point:
             <Limit name="concurrent-instances" max="16" />
         </MediaCodec>
     </Decoders>
-    <Include href="media_codecs_google_video_le.xml" />
 </MediaCodecs>
