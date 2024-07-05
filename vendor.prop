@@ -26,7 +26,6 @@ ro.hw_timeout_multiplier=6
 ro.incremental.enable=1
 
 # Media
-debug.stagefright.omx_default_rank=0
 ro.media.xml_variant.codecs=_vendor
 ro.media.xml_variant.codecs_performance=_vendor
 vendor.mediacodec.binder.size=4
