@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "003230aa_161d0015",
+        "filename": "media/media_codecs_8937_v1.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-07-06T19:55:50Z",
+      "side": 1,
+      "message": "Should be removed too.",
+      "range": {
+        "startLine": 111,
+        "startChar": 19,
+        "endLine": 111,
+        "endChar": 44
+      },
+      "revId": "83cf8ee8301b4c269459e4f809b06df75dcda834",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "599ea6a1_eb60e89f",
+        "filename": "media/media_codecs_vendor.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-07-06T19:55:50Z",
+      "side": 1,
+      "message": "Same.",
+      "range": {
+        "startLine": 111,
+        "startChar": 19,
+        "endLine": 111,
+        "endChar": 44
+      },
+      "revId": "83cf8ee8301b4c269459e4f809b06df75dcda834",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "297bf180_7c10fef9",
+        "filename": "mithorium.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-07-06T19:55:50Z",
+      "side": 1,
+      "message": "Delete.",
+      "range": {
+        "startLine": 295,
+        "startChar": 24,
+        "endLine": 295,
+        "endChar": 49
+      },
+      "revId": "83cf8ee8301b4c269459e4f809b06df75dcda834",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
