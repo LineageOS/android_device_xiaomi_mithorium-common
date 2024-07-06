@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9c5926e9_7b412eb3",
+        "filename": "media/media_codecs.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-07-06T20:25:01Z",
+      "side": 1,
+      "message": "Remove.",
+      "range": {
+        "startLine": 248,
+        "startChar": 8,
+        "endLine": 248,
+        "endChar": 95
+      },
+      "revId": "0d9d1ce8ada3ecb0123619ca5865f03665cd356b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7fbab31b_cec65c05",
+        "filename": "media/media_codecs_8937.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-07-06T20:25:01Z",
+      "side": 1,
+      "message": "Remove",
+      "range": {
+        "startLine": 258,
+        "startChar": 8,
+        "endLine": 258,
+        "endChar": 95
+      },
+      "revId": "0d9d1ce8ada3ecb0123619ca5865f03665cd356b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
