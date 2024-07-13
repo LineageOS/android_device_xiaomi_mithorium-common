@@ -16,6 +16,24 @@
       "message": "Is this really different from qti aidl hal from caf-common repo?",
       "revId": "93c33807d2ffc0ae1d4ace0539413aac150e231f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "50a8baf2_c374ad12",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2024-07-13T01:24:00Z",
+      "side": 1,
+      "message": "oh whoops, I didn\u0027t knew that it existed... will try.",
+      "parentUuid": "0377b8b9_b3f72eb9",
+      "revId": "93c33807d2ffc0ae1d4ace0539413aac150e231f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
