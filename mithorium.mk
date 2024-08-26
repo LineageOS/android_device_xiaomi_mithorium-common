@@ -61,11 +61,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.print.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.print.xml \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2019-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
 
-ifneq ($(TARGET_HAS_NO_CONSUMERIR),true)
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
-endif
-
 # ANT
 PRODUCT_PACKAGES += \
     AntHalService \
@@ -144,13 +139,6 @@ PRODUCT_PACKAGES += \
 # Configstore
 PRODUCT_PACKAGES += \
     disable_configstore
-
-# Consumer IR
-ifneq ($(TARGET_HAS_NO_CONSUMERIR),true)
-PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-impl \
-    android.hardware.ir@1.0-service
-endif
 
 # Device-specific Settings
 PRODUCT_PACKAGES += \
