@@ -44,6 +44,7 @@ vendor.usb.controller=msm_hsusb
 vendor.usb.diag.func.name=diag
 vendor.usb.use_ffs_mtp=1
 vendor.usb.use_gadget_hal=1
+vendor.usb.uvc.payload_transfer_size=1024
 
 af.fast_track_multiplier=1
 audio.offload.min.duration.secs=30
