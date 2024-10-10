@@ -39,6 +39,7 @@ persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # USB
 ro.usb.uvc.enabled=true
+ro.usb.uvc.payload_transfer_size=1024
 vendor.usb.controller=msm_hsusb
 vendor.usb.diag.func.name=diag
 vendor.usb.use_ffs_mtp=1
