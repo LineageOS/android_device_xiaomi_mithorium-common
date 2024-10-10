@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb35f555_6c3e5869",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2024-10-10T08:41:12Z",
+      "side": 1,
+      "message": "https://gerrit.libremobileos.com/q/topic:DeviceAsWebcam-payload_transfer_size",
+      "revId": "7a68a38a08737ebea20d9d6b94a9886de0307c8c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
