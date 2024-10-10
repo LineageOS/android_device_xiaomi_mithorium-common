@@ -103,6 +103,18 @@ on property:ro.product.vendor.model=*
 on property:sys.boot_completed=1 && property:vendor.usb.uvc.function.init=1
     write /config/usb_gadget/g1/functions/uvc.0/streaming_maxpacket ${ro.usb.uvc.payload_transfer_size}
 
+    rm /config/usb_gadget/g1/functions/uvc.0/streaming/class/fs/h1
+    rm /config/usb_gadget/g1/functions/uvc.0/streaming/class/hs/h1
+
+    rm /config/usb_gadget/g1/functions/uvc.0/streaming/header/h/u
+    rm /config/usb_gadget/g1/functions/uvc.0/streaming/header/h1/u1
+
+    rmdir /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m1/720p
+    #rmdir /config/usb_gadget/g1/functions/uvc.0/streaming/mjpeg/m1/1080p
+
+    symlink /config/usb_gadget/g1/functions/uvc.0/streaming/header/h1 /config/usb_gadget/g1/functions/uvc.0/streaming/class/fs/h1
+    symlink /config/usb_gadget/g1/functions/uvc.0/streaming/header/h1 /config/usb_gadget/g1/functions/uvc.0/streaming/class/hs/h1
+
 # Wi-Fi
 on init
     chown wifi wifi /sys/module/wlan/parameters/fwpath
