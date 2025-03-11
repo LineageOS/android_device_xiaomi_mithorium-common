@@ -578,7 +578,7 @@ vendor/lib64/libaoa.so
 
 # WLAN - from FP3
 vendor/bin/ptt_socket_app
-vendor/bin/wcnss_service
+vendor/bin/wcnss_service;MODULE_SUFFIX=-mithorium
 
 # Misc
 vendor/etc/public.libraries.txt
