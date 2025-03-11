@@ -48,7 +48,6 @@ if [ -z "$ONLY_TARGET" ]; then
     write_makefiles "${MY_DIR}/proprietary-files-misc.txt" true
     write_makefiles "${MY_DIR}/proprietary-files-qc-sys.txt" true
     write_makefiles "${MY_DIR}/proprietary-files-qc-vndr.txt" true
-    write_makefiles "${MY_DIR}/proprietary-files-qc-vndr-32.txt" true
 
     # Finish
     write_footers
