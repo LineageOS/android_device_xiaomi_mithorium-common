@@ -43,7 +43,8 @@ TARGET_KERNEL_CONFIG := \
     vendor/debugfs.config \
     vendor/feature/android-12.config \
     vendor/feature/erofs.config \
-    vendor/feature/lmkd.config
+    vendor/feature/lmkd.config \
+    vendor/feature/uclamp.config
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
