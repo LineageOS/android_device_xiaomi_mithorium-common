@@ -38,6 +38,7 @@ persist.vendor.radio.mt_sms_ack=30
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # USB
+ro.usb.uvc.disable_video_encode_flag=true
 ro.usb.uvc.enabled=true
 ro.usb.uvc.payload_transfer_size=1024
 vendor.usb.controller=msm_hsusb
