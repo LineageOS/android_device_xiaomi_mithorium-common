@@ -3,3 +3,6 @@ dalvik.vm.dex2oat64.enabled=true
 
 # DPM
 persist.vendor.dpm.feature=11
+
+# USB
+persist.sys.uvc.disable_video_encode_flag=true
