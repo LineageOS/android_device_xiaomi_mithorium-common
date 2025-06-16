@@ -45,9 +45,6 @@ TARGET_KERNEL_CONFIG := \
     vendor/feature/erofs.config \
     vendor/feature/lmkd.config
 
-# ANT
-BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
-
 # Audio
 BOARD_USES_ALSA_AUDIO := true
 USE_XML_AUDIO_POLICY_CONF := 1
