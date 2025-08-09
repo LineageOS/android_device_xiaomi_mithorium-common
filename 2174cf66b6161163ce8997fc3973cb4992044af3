@@ -16,6 +16,24 @@
       "message": ":\u003d -\u003e +\u003d was in original change for a reason ^.^",
       "revId": "2174cf66b6161163ce8997fc3973cb4992044af3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e49c4233_c67e6573",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2025-08-09T09:48:45Z",
+      "side": 1,
+      "message": "oh, thx for finding it out, i missed it lol",
+      "parentUuid": "61679468_1ccc4d3d",
+      "revId": "2174cf66b6161163ce8997fc3973cb4992044af3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
