@@ -24,15 +24,15 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
-import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settingslib.widget.MainSwitchPreference;
+import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
 import org.lineageos.settings.R;
 
-public class DiracSettingsFragment extends PreferenceFragmentCompat implements
-        Preference.OnPreferenceChangeListener, OnCheckedChangeListener {
+public class DiracSettingsFragment extends SettingsBasePreferenceFragment
+        implements Preference.OnPreferenceChangeListener, OnCheckedChangeListener {
 
     private static final String PREF_ENABLE = "dirac_enable";
     private static final String PREF_HEADSET = "dirac_headset_pref";
