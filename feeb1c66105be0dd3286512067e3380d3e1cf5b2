@@ -1,4 +1,22 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "02458e7f_fadfa193",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 35364
+      },
+      "writtenOn": "2025-12-01T03:20:00Z",
+      "side": 1,
+      "message": "Thank you very much Cafebabe, i believe it is this patch which has fixed my redmi 8 touch panel. You are the best!",
+      "revId": "feeb1c66105be0dd3286512067e3380d3e1cf5b2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ],
   "submitRequirementResults": []
 }
