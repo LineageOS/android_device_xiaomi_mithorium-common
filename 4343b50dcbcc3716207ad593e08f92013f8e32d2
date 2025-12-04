@@ -16,6 +16,121 @@
       "message": "I\u0027m so unsure whether if I did this correctly...",
       "revId": "4343b50dcbcc3716207ad593e08f92013f8e32d2",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f6194a9a_0067ef71",
+        "filename": "parts/src/org/lineageos/settings/dirac/DiracSettingsFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-12-04T18:32:42Z",
+      "side": 1,
+      "message": "```suggestion\n                mDiracUtils.setEnabled((Boolean) newValue);\n```",
+      "range": {
+        "startLine": 70,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 50
+      },
+      "revId": "4343b50dcbcc3716207ad593e08f92013f8e32d2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6b8fe393_6ed2461a",
+        "filename": "parts/src/org/lineageos/settings/dirac/DiracSettingsFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-12-04T18:32:42Z",
+      "side": 1,
+      "message": "Doesn\u0027t even compile.",
+      "range": {
+        "startLine": 78,
+        "startChar": 32,
+        "endLine": 78,
+        "endChar": 42
+      },
+      "revId": "4343b50dcbcc3716207ad593e08f92013f8e32d2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9d21f9e6_a62082bc",
+        "filename": "parts/src/org/lineageos/settings/dirac/DiracSettingsFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-12-04T18:32:42Z",
+      "side": 1,
+      "message": "All of this is no longer necessary. MainSwitchPreference now updates itself.",
+      "range": {
+        "startLine": 72,
+        "startChar": 0,
+        "endLine": 86,
+        "endChar": 17
+      },
+      "revId": "4343b50dcbcc3716207ad593e08f92013f8e32d2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c8d7784_aa922630",
+        "filename": "parts/src/org/lineageos/settings/doze/DozeSettingsFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-12-04T18:32:42Z",
+      "side": 1,
+      "message": "Can be removed.",
+      "range": {
+        "startLine": 62,
+        "startChar": 41,
+        "endLine": 62,
+        "endChar": 64
+      },
+      "revId": "4343b50dcbcc3716207ad593e08f92013f8e32d2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b1b7b519_5da833d7",
+        "filename": "parts/src/org/lineageos/settings/doze/DozeSettingsFragment.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-12-04T18:32:42Z",
+      "side": 1,
+      "message": "This entire block is wrong. You need to check what preference is changed.\n\nSee: https://review.lineageos.org/c/LineageOS/android_device_fxtec_pro1x/+/462463/1/devicesettings/src/org/lineageos/settings/device/doze/DozeSettingsFragment.java",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 100,
+        "endChar": 20
+      },
+      "revId": "4343b50dcbcc3716207ad593e08f92013f8e32d2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
