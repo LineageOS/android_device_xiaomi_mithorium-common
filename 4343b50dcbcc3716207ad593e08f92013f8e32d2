@@ -18,6 +18,23 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "14a752b7_fee89a92",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-12-04T18:34:22Z",
+      "side": 1,
+      "message": "Note: this change and the previous one can and should be merged to 23.0 (and then fast-forwarded to 23.1).",
+      "revId": "4343b50dcbcc3716207ad593e08f92013f8e32d2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f6194a9a_0067ef71",
