@@ -16,6 +16,29 @@
       "message": "This and all checks below are wrong. See again my original changes.",
       "revId": "e4c0d2a62b0b79d4c2960884fb5db4e27c41ecac",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0a8b9ca1_01be8e4c",
+        "filename": "parts/src/org/lineageos/settings/doze/DozeSettingsFragment.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-12-13T23:51:18Z",
+      "side": 1,
+      "message": "```suggestion\n\n            mWakeOnGesturePreference.setEnabled(isChecked);\n            mPickUpPreference.setEnabled(isChecked);\n            mHandwavePreference.setEnabled(isChecked);\n            mPocketPreference.setEnabled(isChecked);\n```",
+      "range": {
+        "startLine": 94,
+        "startChar": 0,
+        "endLine": 101,
+        "endChar": 52
+      },
+      "revId": "e4c0d2a62b0b79d4c2960884fb5db4e27c41ecac",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
