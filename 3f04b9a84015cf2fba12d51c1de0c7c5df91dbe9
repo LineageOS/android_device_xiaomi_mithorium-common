@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "229d878e_c94a3eba",
+        "filename": "sepolicy/vendor/hal_wifi_supplicant_default.te",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-08-17T00:57:13Z",
+      "side": 1,
+      "message": "IIRC this has a proper fix, I think the fix was removing the service from your device tree and using the common one",
+      "revId": "3f04b9a84015cf2fba12d51c1de0c7c5df91dbe9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
