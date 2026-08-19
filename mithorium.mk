@@ -154,7 +154,7 @@ PRODUCT_PACKAGES += \
     gralloc.msm8937
 
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0.vendor
+    lineage.frameworks.displayservice@1.0.vendor
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
@@ -170,6 +170,8 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     vendor.display.config@1.11.vendor \
     vendor.display.config@2.0.vendor
+
+$(call soong_config_set_bool,surfaceflinger,register_displayservice,true)
 
 # DRM
 PRODUCT_PACKAGES += \
