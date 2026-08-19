@@ -154,7 +154,7 @@ PRODUCT_PACKAGES += \
     gralloc.msm8937
 
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0.vendor
+    lineage.frameworks.displayservice@1.0.vendor
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
