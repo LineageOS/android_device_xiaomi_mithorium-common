@@ -171,6 +171,8 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.11.vendor \
     vendor.display.config@2.0.vendor
 
+$(call soong_config_set_bool,surfaceflinger,register_displayservice,true)
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
